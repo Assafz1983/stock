@@ -3,13 +3,13 @@ class GraphHandler {
     basicSettings = {
         animationEnabled: true,
         title:{
-            text: "Website Traffic"
+            text: ""
         },
         axisX:{
             valueFormatString: "MM/DD/YY"
         },
         axisY: {
-            title: "Number of Visitors",
+            title: "Close price",
             includeZero: true
             
         },
