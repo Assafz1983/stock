@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+    <link rel="stylesheet" href="./resources/css/style.css">
+</head>
+<body>
+    <div id="errMsg" class="message hidden"></div>
+    <h1 class="main" id="title">Stock quote</h1>
+    <div class="main">
+            
+            <div class="flex form">
+                <div class="flex-1">
+                        <label for="stock">Set Stock name: </label>
+                        <input type="text" id="stock" value="MSFT"/>
+                        <button id="stockBtn">Set</button>
+                </div>
+                <div class="flex-1">
+                        <label for="threshold">Set threshold: </label>
+                        <input type="number" id="threshold" value="10"/>
+                        <button id="thresholdBtn">Set</button>
+                </div>
+                
+            </div>
+            
+           
+
+    </div>
+    <div class="main">
+            <div id="chartContainer"></div>
+    </div>
+    
+    <script src="./vendor/canvas.min.js"></script>
+    <script src="./vendor/moment.min.js"></script>
+    <script src="./app/apiHandler.js"></script>
+    <script src="./app/graphHandler.js"></script>
+    <script src="./app/domManipulator.js"></script>
+    <script src="./app/controller.js"></script>
+    
+    <script>
+
+        const appCtrl = new Controller();
+        appCtrl.symbolSelected('MSFT');
+    </script>
+</body>
+</html>
